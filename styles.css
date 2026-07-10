@@ -350,10 +350,11 @@ blockquote footer {
 
 .contact h2 {
   margin: 0;
-  max-width: 18ch;
+  max-width: none;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 800;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .contact-links {
@@ -672,8 +673,8 @@ blockquote footer {
   }
 
   .contact h2 {
-    max-width: 12ch;
     font-size: clamp(32px, 9vw, 42px);
+    white-space: normal;
   }
 
   .case-hero > div {
