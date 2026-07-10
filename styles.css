@@ -813,11 +813,16 @@ blockquote footer {
   }
 
   .quote-grid {
-    gap: 28px;
+    gap: 24px;
+  }
+
+  .testimonials .section {
+    padding-top: max(72px, calc(env(safe-area-inset-top) + 56px));
+    padding-bottom: 56px;
   }
 
   blockquote p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .contact > div {
@@ -833,15 +838,15 @@ blockquote footer {
   .contact-links .button {
     width: auto;
     max-width: none;
-    min-height: 42px;
+    min-height: 40px;
     flex: 0 0 auto;
-    padding: 9px 14px;
-    font-size: 14px;
+    padding: 8px 13px;
+    font-size: 13px;
   }
 
   .contact h2 {
-    max-width: 11ch;
-    font-size: clamp(34px, 8vw, 38px);
+    max-width: 10ch;
+    font-size: clamp(30px, 7.4vw, 34px);
     line-height: 1.08;
     white-space: normal;
   }
