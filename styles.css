@@ -598,6 +598,11 @@ blockquote footer {
   min-width: 0;
 }
 
+.case-content > .tags,
+.case-content > .results {
+  flex: 0 1 auto;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
