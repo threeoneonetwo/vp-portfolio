@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vansh Pandita | Product, Growth, and AI Portfolio</title>
+  <meta name="description" content="Vansh Pandita is a rising junior at Indiana University building AI products, growth systems, and finance technology across startups and cross-border deals.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Vansh Pandita | Portfolio">
+  <meta property="og:description" content="Recruiting portfolio for product, growth, finance, and AI work by Vansh Pandita.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vp-portfolio.vercel.app/">
+  <meta property="og:image" content="https://vp-portfolio.vercel.app/assets/vansh-pfp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vp-portfolio.vercel.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vansh Pandita",
+      "url": "https://vp-portfolio.vercel.app/",
+      "email": "mailto:vansh@iu.edu",
+      "sameAs": [
+        "https://github.com/vpandita-maker",
+        "https://linkedin.com"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indiana University"
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#top">Vansh Pandita</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>Menu</button>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" hidden data-mobile-menu>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero-copy">
+      <h1>The intern who ships like a founder.</h1>
+      <p>I'm Vansh, a rising junior at Indiana University building AI products used thousands of times worldwide, driving growth into the millions, and advising on $100M+ cross-border deals. Looking for a summer 2027 team that moves fast.</p>
+      <div class="actions">
+        <a class="button primary" href="#work">See the work</a>
+        <a class="button secondary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/assets/vansh-pfp.jpg" alt="Vansh Pandita" width="900" height="900">
+    </div>
+  </header>
+
+  <main>
+    <section class="split" id="about">
+      <h2>About</h2>
+      <p class="statement">I turn ambiguous problems into shipped products. Engineering by training, operator by instinct. I've built tools people actually use, grown audiences past a million, and sat at the table on nine figure deals.</p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>Selected work</h2>
+      <div class="work-list">
+        <a class="work-row" href="/case-studies/iheartlinkedin">
+          <span class="initial">iH</span>
+          <span>Founder, tech & product · iheartlinkedin.app</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="work-row" href="/case-studies/iheartlinkedin">
+          <span class="initial">M</span>
+          <span>Founder, tech & product · metricfinance.app</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="work-row" href="/case-studies/iheartlinkedin">
+          <span class="initial">W</span>
+          <span>Finance & IT · Wingify</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="work-row" href="/case-studies/iheartlinkedin">
+          <span class="initial">P</span>
+          <span>Growth · Phot.ai</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="work-row" href="/case-studies/iheartlinkedin">
+          <span class="initial">Z</span>
+          <span>Product & growth · Zinc Money</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="section inner">
+        <h2 id="testimonials-title">What people say</h2>
+        <div class="quote-grid">
+          <blockquote>
+            <p>“Vansh operates two levels above his title. Give him a problem on Monday, he ships by Friday.”</p>
+            <footer>Manager, Metric Finance</footer>
+          </blockquote>
+          <blockquote>
+            <p>“The rare intern who thinks in outcomes, not tasks. He found the growth lever nobody else saw.”</p>
+            <footer>Growth lead, Wingify</footer>
+          </blockquote>
+          <blockquote>
+            <p>“He built in a summer what we'd scoped for two quarters.”</p>
+            <footer>Founder & mentor</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div>
+      <h2>Let's build something fast.</h2>
+      <div class="contact-links">
+        <a href="mailto:vansh@iu.edu">vansh@iu.edu</a>
+        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://github.com/vpandita-maker">GitHub</a>
+      </div>
+      <p class="copyright">© 2026 Vansh Pandita</p>
+    </div>
+  </footer>
+
+  <script>
+    const button = document.querySelector('[data-menu-button]');
+    const menu = document.querySelector('[data-mobile-menu]');
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!isOpen));
+      menu.hidden = isOpen;
+      button.textContent = isOpen ? 'Menu' : 'Close';
+    });
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        button.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        button.textContent = 'Menu';
+      });
+    });
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
