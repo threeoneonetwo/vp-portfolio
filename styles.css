@@ -164,9 +164,9 @@ span {
 }
 
 .hero-copy {
-  flex: 1 1 820px;
+  flex: 1 1 620px;
   min-width: 0;
-  max-width: 72rem;
+  max-width: 46rem;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -176,7 +176,7 @@ span {
 .hero h1 {
   margin: 0;
   max-width: 100%;
-  font-size: clamp(44px, 5.4vw, 72px);
+  font-size: clamp(44px, 4vw, 56px);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: 0;
