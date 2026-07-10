@@ -825,8 +825,17 @@ blockquote footer {
   }
 
   .contact-links {
-    flex-direction: column;
+    flex-direction: row;
     gap: 8px;
+  }
+
+  .contact-links .button {
+    width: auto;
+    max-width: none;
+    min-height: 44px;
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    font-size: 14px;
   }
 
   .contact h2 {
