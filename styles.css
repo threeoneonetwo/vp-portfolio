@@ -845,9 +845,9 @@ blockquote footer {
   }
 
   .contact h2 {
-    max-width: 10ch;
-    font-size: clamp(30px, 7.4vw, 34px);
-    line-height: 1.08;
+    max-width: 100%;
+    font-size: clamp(28px, 6.5vw, 32px);
+    line-height: 1.12;
     white-space: normal;
   }
 
