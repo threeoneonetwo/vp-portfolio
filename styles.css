@@ -440,26 +440,28 @@ blockquote footer {
 
 .contact h2 {
   margin: 0;
-  max-width: none;
+  max-width: 14ch;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 800;
   line-height: 1.1;
-  white-space: nowrap;
+}
+
+.contact-copy {
+  margin: -12px 0 0;
+  max-width: 56ch;
+  color: var(--ink-70);
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.6;
 }
 
 .contact-links {
   display: flex;
-  gap: 16px 32px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .contact-links a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  transition: color var(--motion-fast) var(--ease), transform var(--motion-fast) var(--ease), text-underline-offset var(--motion-fast) var(--ease);
+  flex: 0 1 180px;
 }
 
 .contact-links a:hover {
