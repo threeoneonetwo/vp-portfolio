@@ -672,7 +672,7 @@ blockquote footer {
 
   .hero h1 {
     max-width: 12.5ch;
-    font-size: clamp(32px, 9.2vw, 40px);
+    font-size: 40px;
     line-height: 1;
   }
 
@@ -840,10 +840,6 @@ blockquote footer {
   .menu-button {
     min-width: 58px;
     font-size: 13px;
-  }
-
-  .hero h1 {
-    font-size: 31px;
   }
 
   .metrics {
