@@ -156,36 +156,38 @@ span {
 .hero {
   width: min(100%, var(--content));
   margin: 0 auto;
-  padding: clamp(32px, 6vw, 64px) var(--pad-x) clamp(56px, 9vw, 96px);
+  padding: clamp(40px, 6vw, 72px) var(--pad-x) clamp(56px, 8vw, 88px);
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: clamp(32px, 5vw, 56px);
+  align-items: flex-start;
+  gap: clamp(36px, 5vw, 64px);
 }
 
 .hero-copy {
-  flex: 1.35 1 560px;
+  flex: 1 1 620px;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
+  padding-top: clamp(8px, 1.5vw, 18px);
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(40px, 4.2vw, 56px);
+  max-width: 13.5ch;
+  font-size: clamp(44px, 5.2vw, 72px);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 0.98;
   letter-spacing: 0;
   text-wrap: balance;
 }
 
 .hero p {
   margin: 0;
-  max-width: 56ch;
+  max-width: 64ch;
   color: var(--ink-70);
-  font-size: clamp(17px, 1.5vw, 20px);
-  line-height: 1.6;
+  font-size: clamp(17px, 1.35vw, 19px);
+  line-height: 1.65;
 }
 
 .actions {
@@ -241,14 +243,14 @@ span {
 }
 
 .hero-photo {
-  flex: 0.8 1 300px;
+  flex: 0 1 360px;
   min-width: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .hero-photo img {
-  width: min(85%, 420px);
+  width: min(100%, 360px);
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border: 1px solid var(--black);
@@ -272,7 +274,7 @@ span {
 .split {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(24px, 4vw, 40px);
+  gap: clamp(24px, 5vw, 64px);
 }
 
 .split h2,
@@ -284,17 +286,17 @@ span {
 }
 
 .split h2 {
-  flex: 0 0 200px;
+  flex: 0 0 180px;
 }
 
 .statement {
   margin: 0;
-  flex: 1 1 480px;
+  flex: 1 1 620px;
   min-width: 0;
-  max-width: 32ch;
-  font-size: clamp(20px, 2.2vw, 28px);
+  max-width: 68ch;
+  font-size: clamp(18px, 1.45vw, 22px);
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.65;
   text-wrap: pretty;
 }
 
@@ -656,25 +658,28 @@ blockquote footer {
   .hero {
     flex-wrap: wrap-reverse;
     align-items: flex-start;
-    gap: 28px;
-    padding-top: 20px;
-    padding-bottom: 48px;
+    gap: 30px;
+    padding-top: 22px;
+    padding-bottom: 52px;
   }
 
   .hero-copy {
     flex: 1 1 100%;
     width: 100%;
-    gap: 22px;
+    gap: 20px;
+    padding-top: 0;
   }
 
   .hero h1 {
-    font-size: clamp(38px, 11vw, 48px);
-    line-height: 1.02;
+    max-width: 12.5ch;
+    font-size: clamp(36px, 10.4vw, 46px);
+    line-height: 1;
   }
 
   .hero p {
-    font-size: 17px;
-    line-height: 1.58;
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.62;
   }
 
   .actions {
@@ -695,6 +700,7 @@ blockquote footer {
   .hero-photo {
     flex: 1 1 100%;
     width: 100%;
+    justify-content: center;
   }
 
   .split,
@@ -715,8 +721,9 @@ blockquote footer {
     flex: 1 1 100%;
     width: 100%;
     max-width: none;
-    font-size: clamp(20px, 6vw, 24px);
-    line-height: 1.45;
+    font-size: clamp(16px, 4.5vw, 18px);
+    font-weight: 500;
+    line-height: 1.68;
   }
 
   .work-row {
@@ -836,7 +843,7 @@ blockquote footer {
   }
 
   .hero h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .metrics {
