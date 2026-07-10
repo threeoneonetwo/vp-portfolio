@@ -446,14 +446,6 @@ blockquote footer {
   line-height: 1.1;
 }
 
-.contact-copy {
-  margin: -12px 0 0;
-  max-width: 56ch;
-  color: var(--ink-70);
-  font-size: clamp(17px, 1.35vw, 20px);
-  line-height: 1.6;
-}
-
 .contact-links {
   display: flex;
   gap: 12px;
