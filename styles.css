@@ -166,6 +166,7 @@ span {
 .hero-copy {
   flex: 1 1 620px;
   min-width: 0;
+  max-width: 46rem;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -174,7 +175,7 @@ span {
 
 .hero h1 {
   margin: 0;
-  max-width: 16ch;
+  max-width: 100%;
   font-size: clamp(44px, 4.2vw, 58px);
   font-weight: 800;
   line-height: 1.08;
@@ -184,7 +185,7 @@ span {
 
 .hero p {
   margin: 0;
-  max-width: 64ch;
+  max-width: 100%;
   color: var(--ink-70);
   font-size: clamp(17px, 1.35vw, 19px);
   line-height: 1.65;
@@ -666,18 +667,19 @@ blockquote footer {
   .hero-copy {
     flex: 1 1 100%;
     width: 100%;
+    max-width: none;
     gap: 20px;
     padding-top: 0;
   }
 
   .hero h1 {
-    max-width: 15ch;
+    max-width: 100%;
     font-size: 40px;
     line-height: 1.08;
   }
 
   .hero p {
-    max-width: none;
+    max-width: 100%;
     font-size: 16px;
     line-height: 1.62;
   }
