@@ -351,9 +351,9 @@ span {
 .work-copy {
   min-width: 0;
   display: grid;
-  grid-template-columns: minmax(180px, 0.75fr) minmax(220px, 1fr) minmax(180px, 0.8fr);
+  grid-template-columns: minmax(260px, 1.2fr) minmax(150px, 0.55fr) minmax(180px, 0.8fr);
   align-items: baseline;
-  gap: clamp(16px, 3vw, 40px);
+  gap: clamp(18px, 3vw, 44px);
 }
 
 .work-type {
@@ -362,6 +362,7 @@ span {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  justify-self: start;
 }
 
 .work-company {
