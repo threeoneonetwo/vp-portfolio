@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vp-portfolio-silk.vercel.app/sitemap.xml
+Sitemap: https://vanshpandita.vercel.app/sitemap.xml
