@@ -440,10 +440,11 @@ blockquote footer {
 
 .contact h2 {
   margin: 0;
-  max-width: 14ch;
+  max-width: none;
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 800;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .contact-links {
