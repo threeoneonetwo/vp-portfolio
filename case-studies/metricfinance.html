@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metric Finance Case Study | Vansh Pandita</title>
+  <meta name="description" content="A case study on Metric Finance, a plain-language equity research product for everyday Indian investors.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Metric Finance Case Study">
+  <meta property="og:description" content="Plain-language AI equity research for everyday Indian investors, built from product insight through launch and growth.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vanshpandita.vercel.app/case-studies/metricfinance">
+  <meta property="og:image" content="https://vanshpandita.vercel.app/assets/vansh-pfp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vanshpandita.vercel.app/case-studies/metricfinance">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNFBVJ9BB7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DNFBVJ9BB7');
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Metric Finance",
+      "creator": {
+        "@type": "Person",
+        "name": "Vansh Pandita"
+      },
+      "description": "Plain-language equity research for everyday Indian investors.",
+      "url": "https://vanshpandita.vercel.app/case-studies/metricfinance"
+    }
+  </script>
+</head>
+<body>
+  <nav class="nav" aria-label="Case study navigation">
+    <a class="brand" href="/">Vansh Pandita</a>
+    <a href="/">← Back to home</a>
+  </nav>
+
+  <header class="case-hero">
+    <div>
+      <div class="eyebrow">Case study · Side project</div>
+      <h1>Metric Finance</h1>
+      <p>Plain-language equity research for everyday Indian investors. Paste any NSE or BSE ticker and get a readable research report in seconds.</p>
+      <div class="metrics">
+        <div class="metric">
+          <strong>150+</strong>
+          <span>users in 10 days</span>
+        </div>
+        <div class="metric">
+          <strong>1,000+</strong>
+          <span>analyses in 2 weeks</span>
+        </div>
+        <div class="metric">
+          <strong>1.5M</strong>
+          <span>launch impressions</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-body">
+    <section class="case-section">
+      <h2>Problem &amp; Insight</h2>
+      <div class="case-content">
+        <p>I identified a massive gap in the Indian retail investor market. India has 80M+ demat account holders with 30M+ new accounts opening yearly. Yet the tooling for first-time investors was fundamentally broken.</p>
+        <p>Existing platforms were built for professional analysts dumping raw numbers with zero interpretation, or generic screeners that overwhelmed users with data. No one was solving for everyday investors who genuinely wanted to understand what they were buying before committing money. The problem was clear: people wanted research, not numbers.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Strategy &amp; Market Position</h2>
+      <div class="case-content">
+        <p>I positioned Metric Finance as plain-language equity research for everyday Indian investors. The core promise: paste any NSE or BSE ticker and receive a full research report in plain language within seconds.</p>
+        <p>The product targets first-time and retail investors actively researching stocks, not day traders or professionals. This positioning meant every feature decision optimized for comprehension and confidence, not trading velocity or technical depth.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Product Design</h2>
+      <div class="case-content">
+        <p>I designed a focused user flow: homepage search for ticker or company name, instant AI-generated report, shareable report page.</p>
+        <p>The report covers eight dimensions: company summary, price action, peer comparison, fundamentals, news sentiment, technical signals, risks, and contrarian perspective showing both bull and bear cases. Every metric interpretation had to be in plain language. Users should move from "curious about this stock" to "I understand the case, risks, and next checks" in under a minute.</p>
+        <p>The key insight was that interpretation matters more than data. Raw P/E ratios are useless without context, so we built context into every metric explanation.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Tech &amp; Architecture</h2>
+      <div class="case-content">
+        <p>I built Metric Finance on Next.js 15 with React 19, TypeScript, Tailwind CSS 4, and Neon Postgres with Drizzle ORM. The architecture reflected product priorities: reliable reports, fast repeat views, shareable links, analytics, and a path toward licensed production market data.</p>
+        <div class="tags">
+          <span>Next.js 15</span>
+          <span>React 19</span>
+          <span>TypeScript</span>
+          <span>Tailwind CSS 4</span>
+          <span>Neon Postgres</span>
+          <span>Drizzle ORM</span>
+          <span>NextAuth</span>
+          <span>PostHog</span>
+        </div>
+        <div class="decision">
+          <h3>Structured report generation</h3>
+          <p>Report generation used strict structured schemas instead of loose text outputs. I defined exact JSON fields covering executive summary, before-you-buy brief, metric interpretation, valuation language, earnings read, market-timing risks, and plain-English explanations. This eliminated frontend fragility and made every report section displayable and reliable.</p>
+        </div>
+        <div class="decision">
+          <h3>Market data abstraction</h3>
+          <p>Market data integration abstracted multiple provider implementations. The MVP started with Yahoo Finance as a temporary bridge, with adapters for OpenAlgo and Upstox-style data. This kept the product from locking to one vendor and preserved the path to move toward licensed production data later.</p>
+        </div>
+        <div class="decision">
+          <h3>Report caching</h3>
+          <p>Postgres and Drizzle persisted generated reports, generation jobs, source data, timestamps, and metadata. Caching mattered for speed on repeat views, cost control by avoiding unnecessary AI calls, and product stability through shareable links. The cache keyed on ticker, enabling 24-hour reuse before forcing fresh analysis.</p>
+        </div>
+        <div class="decision">
+          <h3>Analytics, auth, and retention</h3>
+          <p>Product analytics tracked landing views, search opens and submits, report views, shares, analysis runs, auth lifecycle, and watchlist saves. Authentication used Google via NextAuth, remained optional for core analysis, and gated watchlists for signed-in users. Watchlists created the first retention loop by letting users save stocks, view combined market reads, and access suggestions based on recent activity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Execution</h2>
+      <div class="case-content">
+        <div class="decision">
+          <h3>Phase 1: Core job-to-be-done</h3>
+          <p>User searches ticker, receives readable analysis, and understands the stock in seconds. I built end-to-end search, generation, and shareable report pages first.</p>
+        </div>
+        <div class="decision">
+          <h3>Phase 2: Data grounding and caching</h3>
+          <p>Market-data snapshots, source-data storage, 24-hour report reuse, generation-job tracking, and fallback behavior transformed the app from demo to production-ready research product.</p>
+        </div>
+        <div class="decision">
+          <h3>Phase 3: Product analytics</h3>
+          <p>Tracking acquisition, search intent, report engagement, shares, generation, and auth lifecycle created the measurement foundation for funnel, activation, retention, and cost-per-use analysis.</p>
+        </div>
+        <div class="decision">
+          <h3>Phase 4: Watchlists</h3>
+          <p>Watchlists became the first signed-in retention feature, creating a natural reason to return and build a personal research set.</p>
+        </div>
+        <div class="decision">
+          <h3>Phase 5: UX polish</h3>
+          <p>I refined the dark finance-dashboard styling, homepage, report scanning layouts, mobile spacing, responsive sections, and watchlist CTAs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Launch &amp; Growth</h2>
+      <div class="case-content">
+        <p>I launched Metric Finance in June 2026 using a dual-channel growth strategy that combined organic Twitter distribution with paid creator partnerships.</p>
+        <p>For the organic Twitter launch, I wrote an authentic product announcement post highlighting the problem and solution, then seeded the post to top lifestyle and finance accounts in the startup niche. Within the launch campaign, I drove 1.5M impressions with 74% growth and 13K engagements.</p>
+        <p>To address engagement decline and accelerate conversion, I partnered with two lifestyle creators to run paid UGC ads. The creators produced testimonial-style content showing how Metric Finance solved real stock research friction. This paid creator channel delivered double-digit conversion rates compared to organic Twitter traffic, proving that creator-backed social proof drove user action more effectively than raw impressions.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Metrics &amp; Traction</h2>
+      <div class="case-content">
+        <div class="results">
+          <div class="result">
+            <strong>1.5M</strong>
+            <span>organic launch impressions</span>
+          </div>
+          <div class="result">
+            <strong>13K</strong>
+            <span>engagements</span>
+          </div>
+          <div class="result">
+            <strong>150+</strong>
+            <span>users in under 10 days</span>
+          </div>
+          <div class="result">
+            <strong>1,000+</strong>
+            <span>analyses in under 2 weeks</span>
+          </div>
+          <div class="result">
+            <strong>42.3%</strong>
+            <span>daily user growth rate</span>
+          </div>
+          <div class="result">
+            <strong>2x</strong>
+            <span>creator conversion lift</span>
+          </div>
+        </div>
+        <p>Organic launch metrics included 409 verified followers with 1.9K active followers, 3.9K profile visits with 32% growth, 517 replies, 8.1K likes, 114 reposts, 192 bookmarks, and 62 shares.</p>
+        <p>Product metrics included 192 ticker searches from 120 unique users. Paid UGC ads from two lifestyle creators delivered double-digit conversion rates, significantly outperforming organic Twitter referral conversion and establishing creators as the highest-converting acquisition channel by 2x versus organic distribution.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Key Learnings</h2>
+      <div class="case-content">
+        <p>This taught me that solving a real problem for an underserved market compounds growth organically. By focusing on one outcome, understanding Indian stocks in plain language, every feature served that single mission.</p>
+        <p>I learned that data interpretation beats data availability. Raw market data is commoditized, but translating it into actionable insights is rare.</p>
+        <p>I also learned that organic reach and paid conversion are complementary, not competitive. Twitter drove 1.5M impressions, but creator partnerships converted interested audiences at 2x rates. The best growth strategy combines broad-reach distribution with high-intent creator partnerships.</p>
+        <p>I discovered that structured AI output with strict schemas is non-negotiable for product reliability at scale. Loose text output works for demos but breaks in production. Defining exact output fields eliminated entire classes of frontend bugs.</p>
+        <p>Finally, I learned that caching is a product feature, not just an optimization. Fast report loads drive repeat engagement. Cheap analysis generation scales the user base. Stable shareable links build trust. All three came from treating the cache as part of the product architecture, not an afterthought.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact">
+    <div>
+      <p class="copyright">© 2026 Vansh Pandita</p>
+    </div>
+  </footer>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
