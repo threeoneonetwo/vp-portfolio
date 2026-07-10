@@ -432,10 +432,10 @@ blockquote footer {
 .contact > div {
   width: min(100%, var(--content));
   margin: 0 auto;
-  padding: clamp(56px, 9vw, 96px) var(--pad-x) clamp(28px, 4vw, 40px);
+  padding: clamp(42px, 6vw, 64px) var(--pad-x) clamp(28px, 4vw, 40px);
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
 .contact h2 {
