@@ -475,6 +475,21 @@ blockquote footer {
   text-align: center;
 }
 
+.case-footer {
+  border-top: 1px solid var(--rule);
+}
+
+.case-footer > div {
+  width: min(100%, var(--content));
+  margin: 0 auto;
+  padding: 28px var(--pad-x) 36px;
+}
+
+.case-footer .copyright {
+  padding-top: 0;
+  border-top: 0;
+}
+
 .case-hero {
   border-top: 1px solid transparent;
   border-bottom: 1px solid var(--black);
