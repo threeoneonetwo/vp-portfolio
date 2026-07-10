@@ -603,6 +603,10 @@ blockquote footer {
   flex: 0 1 auto;
 }
 
+.case-content > .results {
+  align-items: start;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -650,7 +654,12 @@ blockquote footer {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-height: 150px;
   transition: background-color var(--motion-fast) var(--ease);
+}
+
+.case-content > .results .result {
+  min-height: 0;
 }
 
 .result:hover {
