@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>iHeartLinkedIn Case Study | Vansh Pandita</title>
-  <meta name="description" content="A case study on iHeartLinkedIn, an AI content engine for LinkedIn built and grown by Vansh Pandita.">
+  <meta name="description" content="A case study on iHeartLinkedIn, a recruiter-readiness optimizer for LinkedIn profiles.">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="iHeartLinkedIn Case Study">
-  <meta property="og:description" content="An AI content engine for LinkedIn that takes users from blank page to scheduled post in under a minute.">
+  <meta property="og:description" content="A recruiter-readiness optimizer that helps job seekers improve LinkedIn positioning for hiring outcomes.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://vanshpandita.vercel.app/case-studies/iheartlinkedin">
   <meta property="og:image" content="https://vanshpandita.vercel.app/assets/vansh-pfp.jpg">
@@ -33,7 +33,7 @@
         "@type": "Person",
         "name": "Vansh Pandita"
       },
-      "description": "An AI content engine for LinkedIn that takes users from blank page to scheduled post in under a minute.",
+      "description": "A recruiter-readiness optimizer that helps job seekers improve LinkedIn positioning for hiring outcomes.",
       "url": "https://vanshpandita.vercel.app/case-studies/iheartlinkedin"
     }
   </script>
@@ -46,21 +46,21 @@
 
   <header class="case-hero">
     <div>
-      <div class="eyebrow">Case study · AI product</div>
+      <div class="eyebrow">Case study · Side project</div>
       <h1>iHeartLinkedIn</h1>
-      <p>An AI content engine for LinkedIn that takes you from blank page to scheduled post in under a minute. Built, launched, and grown solo.</p>
+      <p>A recruiter-readiness optimizer for LinkedIn profiles. Users enter their LinkedIn URL and target role, then receive a structured score, diagnosis, and fixes tied to hiring outcomes.</p>
       <div class="metrics">
         <div class="metric">
-          <strong>10K+</strong>
-          <span>generations</span>
+          <strong>400+</strong>
+          <span>active users</span>
         </div>
         <div class="metric">
-          <strong>40+</strong>
-          <span>countries</span>
+          <strong>2.2M</strong>
+          <span>launch impressions</span>
         </div>
         <div class="metric">
-          <strong>1</strong>
-          <span>person team</span>
+          <strong>0</strong>
+          <span>paid acquisition</span>
         </div>
       </div>
     </div>
@@ -68,68 +68,110 @@
 
   <main class="case-body">
     <section class="case-section">
-      <h2>Problem</h2>
+      <h2>Problem &amp; Insight</h2>
       <div class="case-content">
-        <p>Professionals know LinkedIn drives careers, but consistent posting is a grind. Writing takes an hour per post, most drafts never ship, and generic AI tools produce content that reads like everyone else's.</p>
+        <p>I noticed a recurring pattern in my LinkedIn network: talented people were not getting recruiter attention despite strong backgrounds. The issue was not their experience. It was how they positioned themselves on LinkedIn.</p>
+        <p>Recruiters decide quickly whether to engage, and most profiles failed basic visibility, clarity, and positioning tests. Existing tools were either generic resume feedback products or creator-focused branding platforms. No one was solving specifically for recruiter readiness.</p>
       </div>
     </section>
 
     <section class="case-section">
-      <h2>Solution</h2>
+      <h2>Strategy &amp; Positioning</h2>
       <div class="case-content">
-        <p>A focused tool that learns a user's voice from their past posts, drafts in that voice, and handles scheduling. One input, one output, no dashboard sprawl. Shipped an MVP in three weeks, then iterated weekly from usage data.</p>
-        <div class="screenshot-placeholder" role="img" aria-label="Product screenshot placeholder"></div>
+        <p>I positioned iHeartLinkedIn not as a generic profile review tool, but as a recruiter-readiness optimizer. The core promise was simple: "Get Recruited, Don't Just Apply."</p>
+        <p>The product targets job seekers and internship applicants actively trying to improve their conversion rate, not creators or fundraisers. That narrow positioning meant every feature decision could optimize for hiring outcomes: interviews, recruiter replies, referrals, and internship conversations.</p>
       </div>
     </section>
 
     <section class="case-section">
-      <h2>Tech stack</h2>
-      <div class="tags">
-        <span>Next.js</span>
-        <span>TypeScript</span>
-        <span>OpenAI API</span>
-        <span>Supabase</span>
-        <span>PostgreSQL</span>
-        <span>Vercel</span>
+      <h2>Product Design</h2>
+      <div class="case-content">
+        <p>I designed a focused user flow: enter LinkedIn URL, target role, seniority, and industry. The app normalizes profile data and sends it to Claude with explicit instructions to diagnose recruiter readiness across eight dimensions: headline quality, about section positioning, experience relevance, skills visibility, credential signal, role alignment, geography fit, and social proof.</p>
+        <p>The output is a 0-100 score with category breakdowns, strengths, weaknesses, and top fixes, all tied to actual hiring outcomes. The scoring rubric was not arbitrary. Every recommendation had to be grounded in the user's actual profile data and directly improve hiring visibility.</p>
       </div>
     </section>
 
     <section class="case-section">
-      <h2>Key decisions</h2>
+      <h2>Tech &amp; Architecture</h2>
       <div class="case-content">
-        <div class="decision">
-          <h3>Start with the narrowest useful workflow</h3>
-          <p>The first version only needed to turn a prompt into a usable LinkedIn post. Keeping the loop small made the product easy to test, ship, and improve from real usage.</p>
+        <p>I built iHeartLinkedIn on Next.js 14 with TypeScript, Supabase for data persistence, and Claude API for analysis. The architecture reflected the product priorities: reliable profile parsing, structured AI output, repeat analysis, and built-in growth loops.</p>
+        <div class="tags">
+          <span>Next.js 14</span>
+          <span>TypeScript</span>
+          <span>Supabase</span>
+          <span>Claude API</span>
+          <span>Apify</span>
+          <span>GA4</span>
+          <span>Vercel</span>
         </div>
         <div class="decision">
-          <h3>Optimize for voice, not volume</h3>
-          <p>Most writing tools produce more text. This one focused on preserving user voice from prior posts, which made the output feel publishable instead of generic.</p>
+          <h3>LinkedIn import and normalization</h3>
+          <p>LinkedIn import used Apify to scrape profile data and normalize messy HTML into structured JSON. This gave the analysis layer a cleaner representation of the user's headline, about section, experience, skills, credentials, location, and social proof.</p>
         </div>
         <div class="decision">
-          <h3>Measure the path to published content</h3>
-          <p>The key product metric was not signups or generations alone. It was how quickly a user could move from an idea to something ready to schedule.</p>
+          <h3>Structured AI output</h3>
+          <p>The AI layer did not rely on loose text responses. I defined a strict tool schema requiring structured JSON output with exact fields. This eliminated frontend fragility and made scores, category breakdowns, fixes, and explanations predictable and displayable.</p>
+        </div>
+        <div class="decision">
+          <h3>Persistence, analytics, and growth loops</h3>
+          <p>Supabase stores analyses, score history, invites, and leaderboard entries, enabling progress tracking and viral loops. Growth mechanics include a share-to-unlock model where users unlock additional fixes by inviting friends or generating share links. GA4 tracks visitor source attribution, while an internal dashboard shows analyses, invites, unlocks, conversion rates, and top roles and industries.</p>
+        </div>
+        <div class="decision">
+          <h3>Prompt guardrails</h3>
+          <p>The AI prompt was strict: optimize only for job search, write in second person, ground every recommendation in profile evidence, and avoid claiming sections are missing when the scraper did not return data.</p>
         </div>
       </div>
     </section>
 
     <section class="case-section">
-      <h2>Results</h2>
+      <h2>Launch &amp; Growth</h2>
       <div class="case-content">
-        <p>Organic launch, zero ad spend. Word of mouth carried it across 40+ countries; retention held because the output actually sounds like the user.</p>
+        <p>I shipped v1 in under a week. The speed came from ruthless scope: solve one problem, recruiter readiness, with one interface, profile to analysis to fixes, and one growth loop, share to unlock.</p>
+        <p>I knew my user base lived on Twitter, so I executed a Twitter-first launch strategy. I wrote a product announcement post highlighting the problem and solution, then seeded it to top accounts in the startup and product niche as well as lifestyle accounts, asking them to engage and retweet.</p>
+        <p>The influencer amplification created early momentum and social proof. Within the launch month, the campaign drove 2.2M impressions and 23.4K engagements, significantly outperforming typical product launch benchmarks.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Traction &amp; Metrics</h2>
+      <div class="case-content">
         <div class="results">
           <div class="result">
-            <strong>10K+</strong>
-            <span>generations</span>
+            <strong>400+</strong>
+            <span>active users</span>
           </div>
           <div class="result">
-            <strong>40+</strong>
-            <span>countries</span>
+            <strong>2.2M</strong>
+            <span>launch impressions</span>
+          </div>
+          <div class="result">
+            <strong>23.4K</strong>
+            <span>engagements</span>
           </div>
           <div class="result">
             <strong>0</strong>
-            <span>ad spend</span>
+            <span>paid acquisition</span>
+          </div>
+          <div class="result">
+            <strong>5K</strong>
+            <span>profile visits</span>
+          </div>
+          <div class="result">
+            <strong>2.8K</strong>
+            <span>active followers</span>
           </div>
         </div>
+        <p>The product gained 400+ active users with zero paid acquisition. Organic growth came from Twitter launch amplification and the share-to-unlock referral loop.</p>
+        <p>I tracked profile visits at 5K, replies at 1.1K, likes at 15.7K, reposts at 335, and bookmarks at 1K. Score history tracking enabled users to re-analyze after editing their LinkedIn profile and watch score changes compound over time, driving repeat engagement.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Key Learnings</h2>
+      <div class="case-content">
+        <p>This project taught me that ruthless positioning beats feature completeness. By narrowing to recruiter readiness, every product decision became simpler and every feature served a single hiring outcome.</p>
+        <p>I also learned that understanding where your audience lives matters as much as the product itself. Seeding with credible voices in the right niche compounded organic reach faster than paid promotion.</p>
+        <p>From a technical perspective, structured AI output with strict schemas was essential for product reliability. Finally, I learned that even one-shot tools can drive organic growth when authentic distribution is amplified by trusted voices on platforms where the target users already spend time.</p>
       </div>
     </section>
   </main>
