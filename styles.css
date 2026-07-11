@@ -617,6 +617,7 @@ blockquote footer {
   align-items: start;
   gap: 0;
   background: transparent;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .tags {
