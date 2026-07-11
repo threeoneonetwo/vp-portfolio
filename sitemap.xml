@@ -16,4 +16,8 @@
     <loc>https://vanshpandita.vercel.app/case-studies/wingify</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vanshpandita.vercel.app/case-studies/phot-ai</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
