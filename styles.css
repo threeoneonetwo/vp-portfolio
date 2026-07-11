@@ -415,13 +415,14 @@ blockquote {
 
 blockquote p {
   margin: 0;
-  font-size: 20px;
+  max-width: 24ch;
+  font-size: clamp(30px, 4vw, 52px);
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.16;
 }
 
 blockquote footer {
-  font-size: 14px;
+  font-size: 18px;
   color: #999;
 }
 
@@ -826,7 +827,9 @@ blockquote footer {
   }
 
   blockquote p {
-    font-size: 17px;
+    max-width: 100%;
+    font-size: 28px;
+    line-height: 1.22;
   }
 
   .contact > div {
