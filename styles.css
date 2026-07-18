@@ -695,6 +695,10 @@ blockquote footer {
   min-height: 0;
 }
 
+.case-content > .results.product-metrics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .result:hover {
   background: #f8f8f8;
 }
@@ -941,6 +945,10 @@ blockquote footer {
   }
 
   .results {
+    grid-template-columns: 1fr;
+  }
+
+  .case-content > .results.product-metrics {
     grid-template-columns: 1fr;
   }
 }
