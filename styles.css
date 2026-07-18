@@ -540,6 +540,14 @@ blockquote footer {
   line-height: 1.03;
 }
 
+.case-hero h1 a {
+  text-decoration: none;
+}
+
+.case-hero h1 a:hover {
+  color: var(--ink-45);
+}
+
 .case-hero p {
   margin: 0;
   max-width: 52ch;
